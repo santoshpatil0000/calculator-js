@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+.container {
+  width: 1000px;
+  height: 600px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("back-ground.jpg");
+  margin: 50px auto;
+}
+.calculator {
+  width: 320px;
+  height: 550px;
+  background-color: #cbcfd1;
+  margin: 0 auto;
+  position: relative;
+  top: 15px;
+  border-radius: 8px;
+  box-shadow: 4px 4px 20px 4px black;
+}
+.result {
+  height: 120px;
+}
+.keyboard {
+  height: 800px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* #clear {
+  grid-column: 1/3;
+  grid-row: 1;
+} */
+.history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  color: #919191;
+  font-size: 15px;
+}
+.output {
+  text-align: left;
+  /* margin: 10px 20px; */
+  margin: 0 auto;
+  height: 60px;
+  width: 312px;
+  font-size: 30px;
+  color: black;
+  outline-color: rgb(28, 165, 165);
+}
+.operator,
+.number,
+.empty {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 15px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.number,
+.empty {
+  background-color: #cbcfd1;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.number,
+.operator {
+  cursor: pointer;
 }
-
-.App-link {
-  color: #61dafb;
+.operator:active,
+.number:active {
+  font-size: 13px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: none;
+}
+button:nth-child(4) {
+  font-size: 20px;
+  background-color: #20b2aa;
+}
+button:nth-child(8) {
+  font-size: 20px;
+  background-color: #ffa500;
+}
+button:nth-child(12) {
+  font-size: 20px;
+  background-color: #f08080;
+}
+button:nth-child(16) {
+  font-size: 20px;
+  background-color: #7d93e0;
+}
+button:nth-child(20) {
+  font-size: 20px;
+  background-color: #9477af;
 }
